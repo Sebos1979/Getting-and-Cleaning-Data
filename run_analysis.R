@@ -115,6 +115,6 @@ HAR_gp_avg <- aggregate(HAR_set[,3:ncol(HAR_set)],
 write.table(HAR_gp_avg,"./output/HAR_gp_avg.txt")
 
 # deleting all objects in memory
-rm(list=ls())
+# rm(list=ls())
    
    
