@@ -101,7 +101,7 @@ HAR_set <- HAR_set[,-2]
 ## rm(list=(ls()[ls()!="HAR_set"]))
 
 # writing the output in a file for answer 1
-write.table(HAR_set,"./output/HAR_set.txt")
+write.table(HAR_set,"./output/HAR_set.txt", row.names = FALSE)
 
 
 ## 4.2 - Tidy data #2: data set with the average of each variable for each activity and each subject. ----
@@ -112,7 +112,7 @@ HAR_gp_avg <- aggregate(HAR_set[,3:ncol(HAR_set)],
                         by=list("Subject" = HAR_set$subjectId, "Activity" = HAR_set$activity), FUN= mean)
 
 # writing the output in a file for answer 2
-write.table(HAR_gp_avg,"./output/HAR_gp_avg.txt")
+write.table(HAR_gp_avg,"./output/HAR_gp_avg.txt", row.names = FALSE)
 
 # deleting all objects in memory
 # rm(list=ls())
