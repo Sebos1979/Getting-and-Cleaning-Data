@@ -98,7 +98,7 @@ HAR_set <- rbind(train, test)
 HAR_set <- HAR_set[,-2]
 
 # deleting all the objects in memory except the resulting data set
-rm(list=(ls()[ls()!="HAR_set"]))
+## rm(list=(ls()[ls()!="HAR_set"]))
 
 # writing the output in a file for answer 1
 write.table(HAR_set,"./output/HAR_set.txt")
